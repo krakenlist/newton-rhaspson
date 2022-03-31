@@ -1,52 +1,19 @@
-# Prerequisites
-*.d
-
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
-
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+#include <stdio.h>
+#include <math.h>
+int main(void)
+{
+float xo,xi;
+int i;
+printf("************* \n");
+printf("calculadora Newton-rhaspson \n");
+printf("\n /////////////////////// \n");
+printf("\n ingrese un valor aproximado a la solución \n");
+scanf("%f" ,&xo);
+for(i=1;i<=10;i++)
+{
+xi=xo-(((xo*xo*xo)+2*(xo*xo)-xo+5)/(3*(xo*xo)+4*xo-1));
+printf("%f \n",xi);
+xo=xi;
+}
+return 0;
+}
